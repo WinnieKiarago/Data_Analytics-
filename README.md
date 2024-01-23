@@ -204,9 +204,9 @@ This year recorded the lowest amount of revenue and sales compared to the previo
 
   2017
 :--------:
-
-![Alt Text](https://github.com/WinnieKiarago/Data_Analytics-/blob/main/Data%20Analysis%20-%20Sales%20Insights/TotalRevenue2017.png)
   
+  ![Alt Text](https://github.com/WinnieKiarago/Data_Analytics-/blob/main/Data%20Analysis%20-%20Sales%20Insights/TotalRevenue2017.png)
+    
   2018 recorded mind blowing increase of 320.81M.
 
    2018
@@ -228,7 +228,9 @@ This year recorded the lowest amount of revenue and sales compared to the previo
  :--------:
 
   ![Alt Text](https://github.com/WinnieKiarago/Data_Analytics-/blob/main/Data%20Analysis%20-%20Sales%20Insights/TotalRevenue2020.png)
-8. 
+
+### Conclusion
+Overall Electrical stores has been constantly the top customer in both revenue and sales while electrical squipo has taken the bottom customer from 2018 t0 2020 by revenue.
 
 
 
