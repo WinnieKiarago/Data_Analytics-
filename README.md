@@ -197,6 +197,38 @@ This year recorded the lowest amount of revenue and sales compared to the previo
 
  ![Alt Text](https://github.com/WinnieKiarago/Data_Analytics-/blob/main/Data%20Analysis%20-%20Sales%20Insights/Distribution2020.png)
 
+### Observations
+
+1. Based on these visuals, the North zone seem to be winning all through the years. I has recorded the highest sales as well as revenue. The Cental zone has remained the middle ground while the South zone constantly recording the least sales and revenue.
+2. The business started with a total revenue of 92.88M in 2017.
+
+  2017
+:--------:
+
+![Alt Text](https://github.com/WinnieKiarago/Data_Analytics-/blob/main/Data%20Analysis%20-%20Sales%20Insights/TotalRevenue2017.png)
+  
+  2018 recorded mind blowing increase of 320.81M.
+
+   2018
+ :--------:
+
+ ![Alt Text](https://github.com/WinnieKiarago/Data_Analytics-/blob/main/Data%20Analysis%20-%20Sales%20Insights/TotalRevenue2018.png)
+
+ 
+ In 2019 the business took a downward trajectory dropping to 336.02M 
+ 
+   2019
+ :--------:
+ 
+ ![Alt Text](https://github.com/WinnieKiarago/Data_Analytics-/blob/main/Data%20Analysis%20-%20Sales%20Insights/TotalRevenue2019.png)
+ 
+ and dropped even further to 142.22M in 2020.
+
+   2020
+ :--------:
+
+  ![Alt Text](https://github.com/WinnieKiarago/Data_Analytics-/blob/main/Data%20Analysis%20-%20Sales%20Insights/TotalRevenue2020.png)
+8. 
 
 
 
