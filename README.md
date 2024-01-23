@@ -37,7 +37,7 @@ From the products table we can observe that there are 279 codes and 2 types of p
 
 ![Alt Text](https://github.com/WinnieKiarago/Data_Analytics-/blob/main/Data%20Analysis%20-%20Sales%20Insights/products.png)
 
-Additionally we have a null record which could potentially affect our analysis. 
+Additionally we have a null record which could potentially affect our analysis if altered. 
 
 
 For market table, we see that the company is spread accross 4 zones in 16 different markets.
@@ -66,7 +66,142 @@ From the currency column we see that payment are made in Indian Rupees(INR) or U
 ### **Analysis with Power BI**
 
 
-The model is a star schema consisting of 5 tables whereby one of the tables is a fact table and the others are dimensional tables.
+The model is a star schema consisting of 5 tables whereby one of the tables is a fact table and the rest are dimensional tables.
 
+  Default topology
+:-----------------------------:
+
+![Alt Text](https://github.com/WinnieKiarago/Data_Analytics-/blob/main/Data%20Analysis%20-%20Sales%20Insights/original%20topology.png)
+
+  Adjusted topology
+:-----------------------------: 
 ![Alt Text](https://github.com/WinnieKiarago/Data_Analytics-/blob/main/Data%20Analysis%20-%20Sales%20Insights/adjusted_topology.png)
+
+### **ETL**
+The markets table has some missing zones. I'll filter out the empty zones.
+
+  Original Markets Table Data 
+:----------------------------: 
+
+  ![Alt Text](https://github.com/WinnieKiarago/Data_Analytics-/blob/main/Data%20Analysis%20-%20Sales%20Insights/markets_table.jpg)
+
+fx= Table.SelectRows(sales_markets, each true)
+
+  Filtered  Markets Table Data
+:-----------------------------:
+
+  ![Alt Text](https://github.com/WinnieKiarago/Data_Analytics-/blob/main/Data%20Analysis%20-%20Sales%20Insights/marketzoneafterETL.png)
+
+fx= Table.SelectRows(sales_markets, each ([zone] <> ""))
+
+On the transactions table, we see there are some zero and negative values. I'll filter that out. We also see that the currency is in INR and USD. I will convert USD to INR since that is the currency used most.
+
+  Original Transactions Table Data
+:----------------------------------:
+
+   ![Alt Text](https://github.com/WinnieKiarago/Data_Analytics-/blob/main/Data%20Analysis%20-%20Sales%20Insights/transactions_unfiltered.png)
+
+   Transformed Transactions Table Data
+:---------------------------------------:
+
+   ![Alt Text](https://github.com/WinnieKiarago/Data_Analytics-/blob/main/Data%20Analysis%20-%20Sales%20Insights/transactionsafterETL.png)
+
+From the above table, I created a column **'Normalize_sales_amount'** which I used to convert USD to INR using the exxhange rate
+
+### **Visualization**
+
+I will first create the base measures table which will help us create other elements on our dashboard. In this case I will use revenue and sales quantity. I'll then add different elements such as year, zones, markets etc in order to give clear insights of how the company is performing.
+
+This is the final dashboard I created.
+
+![Alt Text](https://github.com/WinnieKiarago/Data_Analytics-/blob/main/Data%20Analysis%20-%20Sales%20Insights/final_dashboard.png)
+
+lets see how the products are performing in different regions
+
+   ### The 'blank product'
+
+   2017
+:--------:
+
+![Alt Text](https://github.com/WinnieKiarago/Data_Analytics-/blob/main/Data%20Analysis%20-%20Sales%20Insights/blank2017.png)
+
+Majority of the revenue was collected in the North zone which amounted to 38.88% while the least revenue was collected in the South Zone which amounted to 0.46%. The month of November recorded the highest sales as well as revenue.
+
+   2018
+ :--------:
+
+![Alt Text](https://github.com/WinnieKiarago/Data_Analytics-/blob/main/Data%20Analysis%20-%20Sales%20Insights/blank2018.png)
+
+The highest amount of sales made and revenue collected was in the month of August. There was an increase in revenue from 48.90M to 200.61M with the South zone recording an increase of 0.5% increase in sales compared to the previous year.
+
+   2019
+ :--------:
+
+![Alt Text](https://github.com/WinnieKiarago/Data_Analytics-/blob/main/Data%20Analysis%20-%20Sales%20Insights/blank2019.png)
+
+There was a significant drop in revenue of 46M with July recording the highest revenue and August the highest sales. All zone had dropped in sales as well as revenue collected.
+
+   2020
+ :--------:
+
+![Alt Text](https://github.com/WinnieKiarago/Data_Analytics-/blob/main/Data%20Analysis%20-%20Sales%20Insights/blank2020.png)
+
+This year recorded the lowest amount of revenue and sales compared to the previous months. The North Zone still recorded the largest amount of sales and revenue.
+
+
+  ### Own Brand
+
+   2017
+:--------:
+
+![Alt Text](https://github.com/WinnieKiarago/Data_Analytics-/blob/main/Data%20Analysis%20-%20Sales%20Insights/own2017.png)
+
+
+   2018
+ :--------:
+
+![Alt Text](https://github.com/WinnieKiarago/Data_Analytics-/blob/main/Data%20Analysis%20-%20Sales%20Insights/own2018.png)
+
+   2019
+ :--------:
+
+![Alt Text](https://github.com/WinnieKiarago/Data_Analytics-/blob/main/Data%20Analysis%20-%20Sales%20Insights/own2019.png)
+
+   2020
+ :--------:
+
+![Alt Text](https://github.com/WinnieKiarago/Data_Analytics-/blob/main/Data%20Analysis%20-%20Sales%20Insights/own2020.png)
+
+
+  ### Distribution
+
+   2017
+:--------:
+
+![Alt Text](https://github.com/WinnieKiarago/Data_Analytics-/blob/main/Data%20Analysis%20-%20Sales%20Insights/Distribution2017.png)
+
+
+   2018
+ :--------:
+
+![Alt Text](https://github.com/WinnieKiarago/Data_Analytics-/blob/main/Data%20Analysis%20-%20Sales%20Insights/Distribution2018.png)
+
+
+   2019
+ :--------:
+
+![Alt Text](https://github.com/WinnieKiarago/Data_Analytics-/blob/main/Data%20Analysis%20-%20Sales%20Insights/Distribution2019.png)
+
+   2020
+ :--------:
+
+ ![Alt Text](https://github.com/WinnieKiarago/Data_Analytics-/blob/main/Data%20Analysis%20-%20Sales%20Insights/Distribution2020.png)
+
+
+
+
+
+
+
+
 
